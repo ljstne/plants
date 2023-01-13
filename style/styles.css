@@ -115,21 +115,15 @@ html {
     min-height: 143px;
 }
 
-.wrapper {
-    max-width: 1220px;
-    margin: 0 auto;
-    justify-content: space-between;
-}
-
 .wrapper_header {
+    max-width: 1220px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px;
     padding-top: 55px;
-    margin: 0;
+    margin: 0 auto;
     background-color: #EDF2EC;
-
 }
 
 .header_nav {
@@ -139,7 +133,7 @@ flex-wrap: wrap;
 
 .nav_item {
     margin-right: 46px;
-    color: #010201    ;
+    color: #010201;
 }
 
 
@@ -190,7 +184,7 @@ flex-wrap: wrap;
     color: #E06733;
 }
 
-.wrapper_main {
+.container_welcome {
     max-width: 1220px;
     margin: auto;
     display: flex;
@@ -198,7 +192,7 @@ flex-wrap: wrap;
     align-items: center;
 }
 
-#welcome {
+.welcome {
     background-color: #EDF2EC;
     min-height: 471px;
     padding-top: 62px;
@@ -260,7 +254,7 @@ margin-bottom: 48px;
     font-family: Inter;
 }
 
-#about {
+.about {
     background-color: white;
     min-height: 567px;
     padding-top: 99px;
@@ -279,7 +273,7 @@ font-size: 40px;
 line-height: 52px;
 }
 
-.wrapper_service {
+.container_service {
     max-width: 1220px;
     margin: auto;
     display: flex;
@@ -288,7 +282,7 @@ line-height: 52px;
     flex-wrap: wrap;
 }
 
-#service {
+.service {
     box-sizing: border-box;
     background-color: #EDF2EC;
     min-height: 1300px;
@@ -342,7 +336,7 @@ line-height: 52px;
     row-gap: 55px;
 }
 
-#prices {
+.prices {
 
     background-color: white;
     min-height: 560px;
@@ -350,7 +344,7 @@ line-height: 52px;
     padding-bottom: 25px;
 }
 
-.wrapper_prices {
+.container_prices {
         max-width: 1220px;
         margin: auto;
         display: flex;

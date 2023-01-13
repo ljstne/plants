@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/sass.css">
     <link rel="fonts" href="fonts/fonts.css">
     <link rel="icon" type="image/x-icon" href="img/logo_vector.png">
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<header id="header">
     <div class="wrapper">
-        <div class="wrapper_header"><div class="header-logo">
+<header class="header">
+        <div class="container_header _container"><div class="header_logo">
             <a href="index.html" class="header-logo-link"><img src="img/logo.png" alt="plants-logo">
             </a>
         </div>
@@ -25,12 +25,12 @@
             <li class="nav_item"><a href="#prices" class="nav_link">Price</a></li>
             <li class="nav_item"><a href="#contacts" class="nav_link">Contacts</a></li>
         </ul>
-    </nav></div>
-    </div>
+    </nav>
+</div>
 </header>
 <main id="main">
-    <section id="welcome">
-        <div class="wrapper_main">
+    <section class="welcome">
+        <div class="container_welcome _container">
             <div>
             <img src="img/leaves.svg" alt="leaves_logo" width="450" height="405" class="leaves_logo">
             </div>
@@ -42,15 +42,15 @@
                  industry. Lorem Ipsum has been the industry's standard dummy
                   text ever since the 1500s.</p>
         
-        <div class="intro_button">
-            <h4 class="learn_more">LEARN MORE</h4>
+        <div class="intro_button _button">
+            <button class="welcome_intro_button">LEARN MORE</button>
 
         </div>
     </div>
             </div>
     </section>
-    <section id="about">
-        <div class="wrapper_main">
+    <section class="about">
+        <div class="container_about _container">
             <div class="about_text">
                 <h2 class="about_head">We are <span class="orange">professional experienced</span> gardeners</h2>
                 <p class="lorem_about">Lorem Ipsum is simply dummy text
@@ -63,19 +63,19 @@
                           essentially unchanged. </p>
             </div>
             <div class="img_plant">
-                <img src="img/houseplant_1.svg" alt="houseplant image" width="464" height="479">
+                <img src="img/houseplant_1.svg" alt="houseplant image" width="250" height="258">
             </div>
 
         </div>
     </section>
-    <section id="service">
-        <div class="wrapper_service">
+    <section class="service">
+        <div class="container_service _container">
             <div class="service_head">
                 <h2 class="h2_service">Service and our projects</h2>
                 <div class="buttons_service">
-                    <div class="button_service"><h4>Gardens</h4></div>
-                    <div class="button_service"><h4>Lawn</h4></div>
-                    <div class="button_service"><h4>Planting</h4></div>
+                    <button class="button_service">Gardens</button>
+                    <button class="button_service">Lawn</button>
+                    <button class="button_service">Planting</button>
                 </div>
             </div>
             <div class="grid_service">
@@ -88,8 +88,8 @@
             </div>
         </div>
     </section>
-    <section id="prices">
-        <div class="wrapper_prices">
+    <section class="prices">
+        <div class="container_prices _container">
             <div class="prices_head">
                 <h2 class="h2_prices">Prices</h2>
                 <div class="selection_prices">
@@ -105,15 +105,15 @@
             <div class="prices_info">
             <h3 class="prices_info_h3">Our best 
                 <span class="green">gardeners</span> are ready to help you</h3>
-                <h4 class="prices_button_contact">Contact us</h4>
+                <button class="prices_button_contact">Contact us</button>
                 <img src="img/leaves.svg" alt="leaves_logo" width="152" height="175">
             </div>
         </div>
     </section>
-    <section id="contacts">
-        <div class="wrapper_contact_us">
-            <div class="img_contact"><img src="img/contact_woman_1.png" alt="gardener image" width="400"
-                height="496"></div>
+    <section class="contacts">
+        <div class="container_contact_us _container">
+            <div class="img_contact"><img src="img/contact_woman_1.png" alt="gardener image" width="200"
+                height="248"></div>
                 <h2 class="h2_contact_head">Contact us</h2>
             <div class="contact_search_city">
                 <select name="city" id="city">
@@ -127,13 +127,13 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer_contact">
+        <div class="container_footer _container">
             <div class="site_info">
                 <p>©</p>
         <p>2022</p>
         <a href="https://github.com/ljstne">github</a>
         </div>
-        <a href="https://rs.school/js-stage0/"><h3>Rolling Scopes School</h3></a>
+        <a href="https://rs.school/js-stage0/" class="rs-school"><h3>Rolling Scopes School</h3></a>
     <ul class="contactmedia">
         <li class="media">
             <a href="https://www.instagram.com"><img src="img/inst1.png" alt="instagram logo"></a></li>
@@ -141,9 +141,11 @@
             <li class="media"><a href="https://www.twitter.com"><img src="img/tw1.png" alt="twitter logo"></a></li>
             <li class="media"><a href="https://www.pinterest.com/"><img src="img/pinterest1.png" alt="pinterest logo"></a>
         </li>
-    </ul></div>
+    </ul>
+</div>
     </footer>
     <script src="index.js"></script>
 </main>
+</div>
 </body>
 </html>
