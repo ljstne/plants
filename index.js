@@ -1,1 +1,29 @@
-console.log('Вёрстка валидная +10 \n Вёрстка семантическая +20 \n Вёрстка соответствует макету +24 50/100 \n Требования к css + 12 \n Интерактивность, реализуемая через css +20 \n в целом 86 \n много претензий к качеству вёрстки, страница местами не вполне совпадает с макетом, при работе с plants#2 проще будет сверстать с нуля')
+const burger = document.querySelector('.menu_mobile');
+const navMenu = document.querySelector('.navigation_bar');
+const link = document.querySelectorAll('.nav_link')
+const body = document.querySelector('body')
+const header = document.querySelector('header')
+burger.addEventListener ('click', () => {
+    burger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    body.addEventListener('click', function (event) {
+    if (!burger.contains(event.target) &&
+    !navMenu.contains(event.target)
+    && 
+    !header.contains(event.target)
+            )
+    {
+      burger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }
+}
+)
+}
+)
+
+for (let i = 0; i < link.length; i++) {
+    link[i].addEventListener("click", function() {
+        burger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}

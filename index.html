@@ -17,7 +17,9 @@
             <a href="index.html" class="header-logo-link"><img src="img/logo.png" alt="plants-logo">
             </a>
         </div>
-        <nav class="navigation">
+        <div class="menu_mobile"><span class="bar-1"></span><span class="bar-2"></span><span class="bar-3"></span>
+        <span class="bar-4"></span></div>
+        <nav class="navigation_bar">
         <ul class="header_nav">
             <li class="nav_item"><a href="#welcome" class="nav_link_orange">Home</a></li>
             <li class="nav_item"><a href="#about" class="nav_link">About us</a></li>
@@ -29,10 +31,10 @@
 </div>
 </header>
 <main id="main">
-    <section class="welcome">
+    <section id="welcome">
         <div class="container_welcome _container">
             <div>
-            <img src="img/leaves.svg" alt="leaves_logo" width="450" height="405" class="leaves_logo">
+            <img src="img/leaves.svg" alt="leaves_logo" class="leaves_logo">
             </div>
             <div class="intro_text">
             <h1 class="intro_head">
@@ -49,7 +51,7 @@
     </div>
             </div>
     </section>
-    <section class="about">
+    <section id="about">
         <div class="container_about _container">
             <div class="about_text">
                 <h2 class="about_head">We are <span class="orange">professional experienced</span> gardeners</h2>
@@ -63,12 +65,12 @@
                           essentially unchanged. </p>
             </div>
             <div class="img_plant">
-                <img src="img/houseplant_1.svg" alt="houseplant image" width="250" height="258">
+                <img src="img/houseplant_1.svg" alt="houseplant image" class="img_plant_element">
             </div>
 
         </div>
     </section>
-    <section class="service">
+    <section id="service">
         <div class="container_service _container">
             <div class="service_head">
                 <h2 class="h2_service">Service and our projects</h2>
@@ -79,42 +81,42 @@
                 </div>
             </div>
             <div class="grid_service">
-                <div class="item_1"><img src="img/service_item.png" alt="Garden care"></div>
-                <div class="item_2"><img src="img/service_item(1).png" alt="Planting"></div>
-                <div class="item_3"><img src="img/service_item(2).png" alt="Lawn care"></div>
-                <div class="item_4"><img src="img/service_item(3).png" alt="Planting"></div>
-                <div class="item_5"><img src="img/service_item(4).png" alt="Graden care"></div>
-                <div class="item_6"><img src="img/service_item(5).png" alt="Planting"></div>
+                <div class="item_1 _service_item"><img src="img/service_item.png" alt="Garden care"></div>
+                <div class="item_2 _service_item"><img src="img/service_item(1).png" alt="Planting"></div>
+                <div class="item_3 _service_item"><img src="img/service_item(2).png" alt="Lawn care"></div>
+                <div class="item_4 _service_item"><img src="img/service_item(3).png" alt="Planting"></div>
+                <div class="item_5 _service_item"><img src="img/service_item(4).png" alt="Graden care"></div>
+                <div class="item_6 _service_item"><img src="img/service_item(5).png" alt="Planting"></div>
             </div>
         </div>
     </section>
-    <section class="prices">
+    <section id="prices">
         <div class="container_prices _container">
             <div class="prices_head">
                 <h2 class="h2_prices">Prices</h2>
                 <div class="selection_prices">
                 <div class="select_item">
                     <h4 class="select_item_h4">Basics</h4>
-                    <img src="img/accordion_btn.svg" alt="button"></div>
+                    <img src="img/accordion_btn.svg" alt="button" class="prices_button_img"></div>
                 <div class="select_item"><h4 class="select_item_h4">Standard</h4>
-                    <img src="img/accordion_btn.svg" alt="button"></div>
+                    <img src="img/accordion_btn.svg" alt="button" class="prices_button_img"></div>
                 <div class="select_item"><h4 class="select_item_h4">Pro care</h4>
-                    <img src="img/accordion_btn.svg" alt="button"></div>
+                    <img src="img/accordion_btn.svg" alt="button" class="prices_button_img"></div>
             </div>
             </div>
             <div class="prices_info">
             <h3 class="prices_info_h3">Our best 
                 <span class="green">gardeners</span> are ready to help you</h3>
                 <button class="prices_button_contact">Contact us</button>
-                <img src="img/leaves.svg" alt="leaves_logo" width="152" height="175">
+                <img src="img/leaves.svg" alt="leaves_logo" width="152" height="175" class="leaves_prices">
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section id="contacts">
         <div class="container_contact_us _container">
-            <div class="img_contact"><img src="img/contact_woman_1.png" alt="gardener image" width="200"
-                height="248"></div>
+            <div class="img_contact"><img src="img/contact_woman_1.png" alt="gardener image" class="contact_woman_img"></div>
                 <h2 class="h2_contact_head">Contact us</h2>
+                <div class="contact_search_block">
             <div class="contact_search_city">
                 <select name="city" id="city">
                     <option value="City">City</option>
@@ -125,8 +127,9 @@
                 </select>
             </div>
         </div>
+        </div>
     </section>
-    <footer class="footer">
+    <footer id="footer">
         <div class="container_footer _container">
             <div class="site_info">
                 <p>©</p>
