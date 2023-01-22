@@ -638,17 +638,18 @@ html {
 .grid_service {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 14% 1fr 14% 1fr;
+  -ms-grid-columns: 1fr 8% 1fr 8% 1fr;
   grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 1fr 45px 1fr;
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 14%;
+  grid-column-gap: 8%;
   grid-row-gap: 8%;
   padding-top: 79px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   row-gap: 45px;
+  margin: 0 auto;
 }
 
 .grid_service > *:nth-child(1) {
@@ -681,8 +682,12 @@ html {
   -ms-grid-column: 5;
 }
 
+._service_item {
+  max-width: 100%;
+}
+
 .grid_service img {
-  width: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 768px) {
