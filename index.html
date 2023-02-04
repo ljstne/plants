@@ -75,18 +75,18 @@
             <div class="service_head">
                 <h2 class="h2_service">Service and our projects</h2>
                 <div class="buttons_service">
-                    <button class="button_service">Gardens</button>
-                    <button class="button_service">Lawn</button>
-                    <button class="button_service">Planting</button>
+                    <button data-filter="garden" class="button_service garden__button">Gardens</button>
+                    <button data-filter="lawn" class="button_service lawn__button">Lawn</button>
+                    <button data-filter="planting" class="button_service planting__button">Planting</button>
                 </div>
             </div>
             <div class="grid_service">
-                <div class="item_1 _service_item"><img src="img/service_item.png" alt="Garden care"></div>
-                <div class="item_2 _service_item"><img src="img/service_item(1).png" alt="Planting"></div>
-                <div class="item_3 _service_item"><img src="img/service_item(2).png" alt="Lawn care"></div>
-                <div class="item_4 _service_item"><img src="img/service_item(3).png" alt="Planting"></div>
-                <div class="item_5 _service_item"><img src="img/service_item(4).png" alt="Graden care"></div>
-                <div class="item_6 _service_item"><img src="img/service_item(5).png" alt="Planting"></div>
+                <div class="item_1 _service_item"><img src="img/service_item.png" alt="Garden care" data-filter="garden" class="imagesService"></div>
+                <div class="item_2 _service_item"><img src="img/service_item(1).png" alt="Planting" data-filter="planting" class="imagesService"></div>
+                <div class="item_3 _service_item"><img src="img/service_item(2).png" alt="Lawn care" data-filter="lawn" class="imagesService"></div>
+                <div class="item_4 _service_item"><img src="img/service_item(3).png" alt="Planting" data-filter="planting" class="imagesService"></div>
+                <div class="item_5 _service_item"><img src="img/service_item(4).png" alt="Graden care" data-filter="garden" class="imagesService"></div>
+                <div class="item_6 _service_item"><img src="img/service_item(5).png" alt="Planting" data-filter="planting" class="imagesService"></div>
             </div>
         </div>
     </section>
@@ -95,13 +95,33 @@
             <div class="prices_head">
                 <h2 class="h2_prices">Prices</h2>
                 <div class="selection_prices">
-                <div class="select_item">
+                <div class="select_item" data-filter="basics">
                     <h4 class="select_item_h4">Basics</h4>
-                    <img src="img/accordion_btn.svg" alt="button" class="prices_button_img"></div>
-                <div class="select_item"><h4 class="select_item_h4">Standard</h4>
-                    <img src="img/accordion_btn.svg" alt="button" class="prices_button_img"></div>
-                <div class="select_item"><h4 class="select_item_h4">Pro care</h4>
-                    <img src="img/accordion_btn.svg" alt="button" class="prices_button_img"></div>
+                    <div class="accordion">
+                    <div class="br_bar"></div>
+                    <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                    <h5><span class="dollar">$</span><span class="sum">25</span> / per hour</h5>
+                    <button class="order_button" data-filter="one"><a href="#contacts">Order</a></button>
+                    </div>
+                </div>
+                <div class="select_item" data-filter="standard"><h4 class="select_item_h4">Standard</h4>
+                    <div class="accordion">
+
+                    <div class="br_bar"></div>
+                    <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                    <h5><span class="dollar">$</span><span class="sum">17</span> / per hour</h5>
+                    <button class="order_button" data-filter="two"><a href="#contacts">Order</a></button>
+                    </div>
+                </div>
+                <div class="select_item" data-filter="pro care"><h4 class="select_item_h4">Pro care</h4>
+                    <div class="accordion">
+
+                    <div class="br_bar"></div>
+                    <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                    <h5><span class="dollar">$</span><span class="sum">45</span> / per hour</h5>
+                    <button class="order_button" data-filter="three"><a href="#contacts">Order</a></button>
+                    </div>
+                </div>
             </div>
             </div>
             <div class="prices_info">
@@ -117,15 +137,47 @@
             <div class="img_contact"><img src="img/contact_woman_1.png" alt="gardener image" class="contact_woman_img"></div>
                 <h2 class="h2_contact_head">Contact us</h2>
                 <div class="contact_search_block">
-            <div class="contact_search_city">
-                <select name="city" id="city">
-                    <option value="City">City</option>
-                    <option value="Cetinje">Cetinje</option>
-                    <option value="Kotor">Kotor</option>
-                    <option value="Skopje">Skopje</option>
-                    <option value="Beograd">Beograd</option>
-                </select>
-            </div>
+            <!-- <div class="contact_search_city"> -->
+                <!-- <input type="text" class="city_select_box" placeholder="City" readonly> -->
+                <!-- <ul class="city_dropdown"> -->
+                    <div class="city_dropdown">
+                        <li class="city_option_list" data-filter="City"><span id="city_placeholder">City</span></li>
+                    </ul>
+                    <ul class="dropdown_hidden">
+                        <li class="city_option" data-filter="Canandaigua, NY" >Canandaigua, NY</li>
+                        <li class="city_option" data-filter="New York City">New York City</li>
+                        <li class="city_option" data-filter="Yonkers, NY">Yonkers, NY</li>
+                        <li class="city_option" data-filter="Sherill, NY">Sherill, NY</li>
+                    </ul>
+                                        <!-- </select> -->
+                    <!-- </ul>  -->
+                </div>
+   <div class="city_info" data-filter="Canandaigua, NY">
+    <div class="city_info_wrapper"><div class="city_info_item"><span class="city_name">City:</span><p class="city_name">Canandaigua</p></div>
+            <div class="city_info_item"><span class="phone">Phone:</span><a href="tel:+1	585	393 0001">+1	585	393 0001</a></div>
+            <div class="city_info_item"><span class="office">Office address:</span><address>151 Charlotte Street</address></div></div>
+            <button class="call_button"><a href="tel:+1	585	393 0001" class="city_info_button">Call us</a></button>
+        </div>
+        <div class="city_info" data-filter="New York City">
+            <div class="city_info_wrapper"><div class="city_info_item"><span class="city_name">City:</span><p class="city_name">New York City</p></div>
+            <div class="city_info_item"><span class="phone">Phone:</span><a href="tel:+1	585	393 0001">+1	585	393 0001</a></div>
+            <div class="city_info_item"><span class="office">Office address:</span><address>151 Charlotte Street</address></div></div>
+            <button class="call_button"><a href="tel:+13159080002" class="city_info_button">Call us</a></button>
+        </div>
+        <div class="city_info" data-filter="Yonkers, NY">
+            <div class="city_info_wrapper"><div class="city_info_item"><span class="city_name">City:</span><p class="city_name">Yonkers, NY</p></div>
+            <div class="city_info_item"><span class="phone">Phone:</span><a href="tel:+1	585	393 0001">+1	585	393 0001</a></div>
+            <div class="city_info_item"><span class="office">Office address:</span><address>151 Charlotte Street</address></div></div>
+            <button class="call_button"><a href="tel:+13159080003" class="city_info_button">Call us</a></button>
+        </div>
+        <div class="city_info" data-filter="Sherill, NY">
+            <div class="city_info_wrapper"><div class="city_info_item"><span class="city_name">City:</span><p class="city_name">Sherill, NY</p></div>
+            <div class="city_info_item"><span class="phone">Phone:</span><a href="tel:+1	585	393 0001">+1	585	393 0001</a></div>
+            <div class="city_info_item"><span class="office">Office address:</span><address>151 Charlotte Street</address></div></div>
+            <button class="call_button"><a href="tel:+13159080004" class="city_info_button">Call us</a></button>
+        </div>
+
+
         </div>
         </div>
     </section>
