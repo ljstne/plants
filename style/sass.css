@@ -631,12 +631,16 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .button_service:hover {
   background-color: #E06733;
   color: white;
   border: 1px solid #E06733;
   border-radius: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .garden__button.active {
@@ -669,9 +673,38 @@ html {
           filter: blur(0);
 }
 
+.garden.blur {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.lawn.blur {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.planting.blur {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+.imagesService.blur {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.imagesService {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 .blur {
   -webkit-filter: blur(4px);
           filter: blur(4px);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .active {
@@ -1032,6 +1065,7 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-bottom: 0px;
 }
 .select_item.active::after {
   content: "";
@@ -1075,11 +1109,22 @@ html {
   margin-bottom: 6px;
   display: block;
 }
+.select_item.active a {
+  font-size: 14px;
+  line-height: 143%;
+  color: #717171;
+  text-decoration: none;
+}
 .select_item.active button {
   background-color: #fff;
   max-width: 86px;
   border-radius: 10px;
   border: none;
+}
+.select_item.active button a {
+  display: inline-block;
+  width: 99%;
+  height: 90%;
 }
 .select_item.active h4 {
   text-align: left;
@@ -1364,6 +1409,12 @@ html {
   color: #717171;
   font-family: Inter;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .city_dropdown li.active {
   display: inline-block;
@@ -1372,6 +1423,18 @@ html {
   background-color: #C1E698;
   max-height: 50px;
 }
+.city_dropdown.active .city_option_list::after {
+  background-image: url(../img/drop_btn.svg);
+}
+
+.city_option_list::after {
+  display: inline-block;
+  content: "";
+  background-image: url(../img/accordion_btn.svg);
+  height: 16px;
+  width: 16px;
+  margin-top: 13px;
+}
 
 .dropdown_hidden {
   display: none;
@@ -1379,7 +1442,7 @@ html {
 }
 .dropdown_hidden.active {
   position: relative;
-  margin-left: -22px;
+  margin-left: -21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1394,9 +1457,25 @@ html {
   font-size: 20px;
   line-height: 200%;
   letter-spacing: 0.05em;
-  color: #717171;
   font-family: Inter;
   cursor: pointer;
+  color: #499A18;
+}
+.dropdown_hidden li::after {
+  content: "";
+  display: block;
+  height: 0.01em;
+  width: 90%;
+  background-color: #D9D9D9;
+}
+.dropdown_hidden li::after:hover {
+  background-color: #717171;
+}
+.dropdown_hidden li:hover {
+  color: #717171;
+}
+.dropdown_hidden li:hover::after {
+  background-color: #717171;
 }
 .dropdown_hidden li.active {
   display: inline-block;
@@ -1452,6 +1531,16 @@ html {
   display: none;
 }
 
+.city_info_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .city_info.selected {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1466,17 +1555,14 @@ html {
   margin: 47px 0 0 0;
   padding-bottom: 16px;
 }
-.city_info.selected .city_info_item {
+.city_info.selected .city_info_item_head {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .city_info.selected span {
   color: #000;
@@ -1484,8 +1570,16 @@ html {
   line-height: 250%;
   margin-bottom: 5px;
   font-family: Inter;
+  font-weight: 500;
 }
-.city_info.selected p, .city_info.selected a, .city_info.selected address {
+
+.city_info_wrapper {
+  padding: 17px 76px 10px 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.city_info_wrapper p, .city_info_wrapper a, .city_info_wrapper address {
   color: #717171;
   font-size: 1rem;
   line-height: 250%;
@@ -1493,26 +1587,22 @@ html {
   font-family: Inter;
 }
 
-.city_info_wrapper {
-  padding: 17px 76px 17px 32px;
+.city_info_item_text a {
+  margin-bottom: 5px;
 }
 
 .call_button {
   max-width: 122px;
   background: #EDF2EC;
-  border: 1px solid #E06733;
-  border-radius: 10px;
+  border: 2px solid #E06733;
+  border-radius: 5px;
   margin: 0 auto;
-  padding: 0 5%;
-}
-.call_button a {
+  padding: 1% 6%;
   color: #717171;
   font-family: Inter;
 }
 .call_button:hover {
   background-color: #E06733;
-}
-.call_button:hover a {
   color: white;
 }
 

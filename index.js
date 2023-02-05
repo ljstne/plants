@@ -31,62 +31,47 @@ for (let i = 0; i < link.length; i++) {
 const gardenButton = document.querySelector('.garden__button')
 const lawnButton= document.querySelector('.lawn__button')
 const plantingButton= document.querySelector('.planting__button')
-const gardenImg = document.querySelectorAll('.garden')
-const lawnImg = document.querySelector('.lawn')
-const plantingImg = document.querySelectorAll('.planting')
+const gardenImg = Array.from(document.querySelectorAll(".imagesService[data-filter='garden']"))
+const lawnImg = document.querySelector(".imagesService[data-filter='lawn']")
+const plantingImg = Array.from(document.querySelectorAll(".imagesService[data-filter='planting']"))
 const clickCounter = {'buttons active' : 0};
 const gardenActive = {active: false}
 const lawnActive = {active: false}
 const plantingActive = {active: false}
 const allImages = document.querySelectorAll('.imagesService');
 
-const buttons = document.querySelectorAll('.button_service');
+const cardsSelector = () => {
+    if (gardenActive.active!=false) {
 
-// buttons.forEach(button => {
-//     button.addEventListener('click', function() 
-//     {
-//         button.classList.toggle('active');
-//         let selectedButton = button.getAttribute('data-filter');
-//         let selectedSecondButton = document.querySelector(`.button_service.active:not([data-filter='${selectedButton}'])`);
-//         let hiddenCards = Array.from(document.querySelectorAll(`.imagesService:not([data-filter='${selectedButton}'])`));
-//         let activeCards = document.querySelectorAll(`.imagesService[data-filter='${selectedButton}']`);
-//         let activatedButtons = Array.from(document.querySelectorAll('.button_service.active'));
-//         console.log(selectedSecondButton, 'second button');
+        allImages.forEach(img=>{img.classList.add('blur')})
 
-//         for (i=0;i<hiddenCards.length;i++) {
-//             if (hiddenCards[i] == selectedSecondButton) {delete hiddenCards[i]; console.log('delete worked');}
-//         }
+     }
+            if (lawnActive.active!=false) {
+                allImages.forEach(img=>{img.classList.add('blur')})
+            }
+                    if (plantingActive.active!=false) {
+                        allImages.forEach(img=>{img.classList.add('blur')})
+                    }
+    
+                            if (lawnActive.active!=false) {
+                                allImages.forEach(img=>{img.classList.add('blur')})
+                            }
+                                    if (lawnActive.active!=true && gardenActive.active!=true && plantingActive.active!=true) {
+                                             allImages.forEach(img=>{img.classList.remove('blur')})
 
-//         if (button.classList.contains('active')) {
-//             hiddenCards.forEach(e => {
-//                 let cardCheck = e.getAttribute('data-filter')
-//                 if (activatedButtons.includes(`button.button_service.${cardCheck}__button.active`))
-//                 {console.log('array working');}
-//                 console.log(`button.button_service.${cardCheck}__button.active`);
-//             e.classList.add('blur');
-//             e.classList.remove('active');
-//           });
-      
-//           activeCards.forEach(e => {
-//             e.classList.remove('blur');
-//             e.classList.add('active');
-//           });
-//           console.log(`activated ${selectedButton}`);
-
-//         }
-//         else if (!button.classList.contains('active')) {
-//             activeCards.forEach(e => {
-//             e.classList.remove('active');}
-//                 )
-//                 hiddenCards.forEach(e => {
-//             e.classList.remove('blur')
-//         })
-//         console.log(`hidden ${selectedButton}`);
-//     }
-//         }
-//         )
-//     }
-//     )
+                                        }
+                                        else {    lawnImg.classList.add('blur')
+                                    }
+                                if (gardenActive.active!=false) {
+                                    gardenImg.forEach(img=> {img.classList.remove('blur')})
+                                }
+                                if (plantingActive.active!=false) {
+                                        plantingImg.forEach(img=> {img.classList.remove('blur')})
+                                }
+                            if (lawnActive.active!=false) {
+                                lawnImg.classList.remove('blur')
+                                }
+}
 
 
 gardenButton.addEventListener('click', () => {
@@ -102,46 +87,7 @@ gardenButton.addEventListener('click', () => {
     if(gardenButton.classList.contains('active')) {gardenActive.active=true;}
     else {gardenActive.active=false}
 
-
-    if (gardenActive.active!=false) {
-    for (i=0;i<allImages.length;i++) {
-        allImages[i].style.filter = 'blur(4px)'
-        }}
-        if (lawnActive.active!=false) {
-            for (i=0;i<allImages.length;i++) {
-                allImages[i].style.filter = 'blur(4px)'
-                }}
-                if (plantingActive.active!=false) {
-                    for (i=0;i<allImages.length;i++) {
-                        allImages[i].style.filter = 'blur(4px)'
-                        }}
-                        if (lawnActive.active!=true && gardenActive.active!=true && plantingActive.active!=true) {
-                            for (i=0;i<allImages.length;i++) {
-                allImages[i].style.filter = 'blur(0px)'
-                }
-            }
-    if (lawnActive.active!=false) {    lawnImg.style.filter = 'blur(0px)'
-}
-    if (plantingActive.active!=false) {
-        for (i=0;i<plantingImg.length;i++) {
-            plantingImg[i].style.filter = 'blur(0px)'
-    }
-}
-
-
-if (plantingActive.active!=false) {
-    for (i=0;i<plantingImg.length;i++) {
-    plantingImg[i].style.filter = 'blur(0px)'
-    }}
-    if (gardenActive.active!=false) {
-        for (i=0;i<gardenImg.length;i++) {
-            gardenImg[i].style.filter = 'blur(0px)'
-    }
-    if (lawnActive.active!=false) {    lawnImg.style.filter = 'blur(0px)'
-}
-
-
-}
+    cardsSelector();
 }
 )
 
@@ -160,43 +106,8 @@ lawnButton.addEventListener('click', () => {
 
 
 
+    cardsSelector();
 
-if (gardenActive.active!=false) {
-    for (i=0;i<allImages.length;i++) {
-        allImages[i].style.filter = 'blur(4px)'
-        }}
-        if (lawnActive.active!=false) {
-            for (i=0;i<allImages.length;i++) {
-                allImages[i].style.filter = 'blur(4px)'
-                }}
-                if (plantingActive.active!=false) {
-                    for (i=0;i<allImages.length;i++) {
-                        allImages[i].style.filter = 'blur(4px)'
-                        }}
-
-                        if (lawnActive.active!=false) {
-                            for (i=0;i<allImages.length;i++) {
-                                allImages[i].style.filter = 'blur(4px)'
-                                }}
-                                if (lawnActive.active!=true && gardenActive.active!=true && plantingActive.active!=true) {
-                                    for (i=0;i<allImages.length;i++) {
-                                        allImages[i].style.filter = 'blur(0px)'
-                                        }
-                                    }
-                                    else {    lawnImg.style.filter = 'blur(4px)'
-                                }
-                            if (gardenActive.active!=false) {
-                                for (i=0;i<gardenImg.length;i++) {
-                                    gardenImg[i].style.filter = 'blur(0px)'
-                            }}
-                            if (plantingActive.active!=false) {
-                                for (i=0;i<plantingImg.length;i++) {
-                                    plantingImg[i].style.filter = 'blur(0px)'
-                            }
-                        }
-    if (lawnActive.active!=false) {
-    lawnImg.style.filter = 'blur(0px)'
-    }
     }
 )
 
@@ -213,45 +124,10 @@ plantingButton.addEventListener('click', () => {
     if(plantingButton.classList.contains('active')) {plantingActive.active=true;}
     else {plantingActive.active=false}
 
+    cardsSelector();
 
-
-    if (gardenActive.active!=false) {
-        for (i=0;i<allImages.length;i++) {
-            allImages[i].style.filter = 'blur(4px)'
-            }}
-            if (lawnActive.active!=false) {
-                for (i=0;i<allImages.length;i++) {
-                    allImages[i].style.filter = 'blur(4px)'
-                    }}
-                    if (plantingActive.active!=false) {
-                        for (i=0;i<allImages.length;i++) {
-                            allImages[i].style.filter = 'blur(4px)'
-                            }}
-    
-                            if (lawnActive.active!=false) {
-                                for (i=0;i<allImages.length;i++) {
-                                    allImages[i].style.filter = 'blur(4px)'
-                                    }}
-                                    if (lawnActive.active!=true && gardenActive.active!=true && plantingActive.active!=true) {
-                                        for (i=0;i<allImages.length;i++) {
-                                            allImages[i].style.filter = 'blur(0px)'
-                                            }
-                                        }
-                                        else {    lawnImg.style.filter = 'blur(4px)'
-                                    }
-                                if (gardenActive.active!=false) {
-                                    for (i=0;i<gardenImg.length;i++) {
-                                        gardenImg[i].style.filter = 'blur(0px)'
-                                }}
-                                if (plantingActive.active!=false) {
-                                    for (i=0;i<plantingImg.length;i++) {
-                                        plantingImg[i].style.filter = 'blur(0px)'
-                                }
-                            }
-        if (lawnActive.active!=false) {
-        lawnImg.style.filter = 'blur(0px)'
-        }
 })
+
 
 const pricesSelects = document.querySelectorAll('.select_item');
 const orderOne = document.querySelector(`.order_button[data-filter=one]`)
@@ -272,6 +148,7 @@ pricesSelects.forEach(select => {select.addEventListener('click', function(event
 if (!orderOne.contains(event.target)&&!orderTwo.contains(event.target)&&!orderThree.contains(event.target)) {
 select.classList.toggle('active')}
 })})
+
 
 const dropdownSelectCity = document.querySelector('.city_dropdown');
 const dropdownSelectList = document.querySelector('.dropdown_hidden');
@@ -319,7 +196,17 @@ dropdownSelectCity.addEventListener('click', function(event) {
         citiesSelect.forEach (city => {city.classList.remove('active')})
         let cityToHide = document.querySelector(`.city_info.selected`);
 
-        if(cityToHide.classList.contains('selected') && !cityToHide.contains(event.target)) {cityToHide.classList.remove('selected');
-        document.getElementById('city_placeholder').innerHTML = `City`;}    }
+        if(cityToHide && cityToHide.classList.contains('selected') && !cityToHide.contains(event.target)) {cityToHide.classList.remove('selected');
+        document.getElementById('city_placeholder').innerHTML = `City`;}
+    }
     })
 })
+
+console.log(`При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +25
+- выполнено, но качество кода хромает \n
+Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 25 
+- то же самое
+\n
+В разделе contacts реализован select с выбором городов +25 \n
+75/100
+`);
