@@ -1,8 +1,9 @@
 const burger = document.querySelector('.menu_mobile');
-const navMenu = document.querySelector('.navigation_bar');
+const navMenu = document.querySelector('.header_nav');
 const link = document.querySelectorAll('.nav_link')
 const body = document.querySelector('body')
-const header = document.querySelector('header')
+const header = document.querySelector('header');
+
 burger.addEventListener ('click', () => {
     burger.classList.toggle('active');
     navMenu.classList.toggle('active');
@@ -201,12 +202,3 @@ dropdownSelectCity.addEventListener('click', function(event) {
     }
     })
 })
-
-console.log(`При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +25
-- выполнено, но качество кода хромает \n
-Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 25 
-- то же самое
-\n
-В разделе contacts реализован select с выбором городов +25 \n
-75/100
-`);

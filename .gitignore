@@ -1,4 +1,7 @@
 plants
-prepros.config
-sass.scss
+style/prepros.config
+style/sass.scss
+style/style.css
+style/styles-dist.css
 style.css
+styles-dist.css
