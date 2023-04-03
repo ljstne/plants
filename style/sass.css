@@ -1,45 +1,15 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a,
+img,
+ol, ul, li, form, footer, header,
+menu, nav, output, section {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  border: 0; /* 1 */
-  padding: 0;
-  white-space: normal; /* 2 */
-  *margin-left: -7px; /* 3 */
-}
-
-button,
-input,
-select,
-textarea {
-  font-size: 100%; /* 1 */
-  margin: 0; /* 2 */
-  vertical-align: baseline; /* 3 */
-  *vertical-align: middle; /* 3 */
 }
 
 button,
@@ -50,46 +20,6 @@ input {
 button,
 select {
   text-transform: none;
-}
-
-button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-  *overflow: visible; /* 4 */
-}
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-  *height: 13px; /* 3 */
-  *width: 13px; /* 3 */
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
 }
 
 ol, ul, li {
@@ -142,11 +72,6 @@ html {
     padding: 0 52px 0 52px;
   }
 }
-@media (max-width: 380px) {
-  ._container {
-    padding: 0 29px 0 29px;
-  }
-}
 .container_header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,6 +81,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 46px;
   padding-bottom: 47px;
   margin: 0 auto;
@@ -166,57 +94,62 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5%;
 }
 
-.nav_item {
-  margin-right: 46px;
-}
 .nav_item:last-child {
   margin-right: 0;
 }
 
 .nav_link {
-  font-size: 1rem;
-  line-height: 220%;
+  font-size: 1.3em;
   color: #010201;
 }
 .nav_link:active {
   opacity: 0.5;
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 100ms, 400ms;
-          transition-duration: 100ms, 400ms;
+  -webkit-transition-duration: 100ms, 300ms;
+          transition-duration: 100ms, 300ms;
 }
 .nav_link:focus, .nav_link:hover {
   opacity: 0.8;
   color: #f9491c;
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 100ms, 400ms;
-          transition-duration: 100ms, 400ms;
+  -webkit-transition-duration: 100ms, 300ms;
+          transition-duration: 100ms, 300ms;
 }
 
-.link_orange {
+.nav_link_orange {
   color: #E06733;
-  font-size: 1rem;
-  line-height: 312%;
+  font-size: 1.3em;
 }
-.link_orange:hover, .link_orange:focus {
+.nav_link_orange:hover, .nav_link_orange:focus {
   color: #0909ff;
   opacity: 0.8;
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 150ms, 500ms;
-          transition-duration: 150ms, 500ms;
+  -webkit-transition-duration: 150ms, 300ms;
+          transition-duration: 150ms, 300ms;
 }
-.link_orange:active {
+.nav_link_orange:active {
   opacity: 0.5;
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 150ms, 500ms;
-          transition-duration: 150ms, 500ms;
+  -webkit-transition-duration: 150ms, 300ms;
+          transition-duration: 150ms, 300ms;
 }
 
 .green {
@@ -235,19 +168,10 @@ html {
 .bar-1, .bar-2, .bar-3, .bar-4 {
   content: "";
   display: block;
-  width: 36px;
-  height: 2px;
+  width: 34px;
+  height: 0.09em;
   margin: 5px auto;
   background-color: #717171;
-}
-
-.navigation_bar {
-  position: fixed;
-  top: -200%;
-  width: 100%;
-  background-color: #EDF2EC;
-  -webkit-transition: 250ms;
-  transition: 250ms;
 }
 
 @media (max-width: 768px) {
@@ -257,6 +181,11 @@ html {
   }
 }
 @media (max-width: 380px) {
+  ._container {
+    padding: 0 29px 0 29px;
+  }
+}
+@media (max-width: 650px) {
   .container_header {
     padding: 30px 25px 30px 25px;
     position: fixed;
@@ -267,12 +196,27 @@ html {
     top: 0;
     z-index: 10;
   }
-  .navigation_bar.active {
+  .header_nav {
+    position: fixed;
+    left: 62%;
+    top: -200%;
+    width: 100%;
+  }
+  .header_nav.active {
     top: 70px;
-    display: block;
+    padding-top: 30px;
+    line-height: 250%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
     left: 0;
     background-color: #EDF2EC;
-    height: 75vh;
+    height: 70vh;
     width: 100%;
     -webkit-transition: 300ms;
     transition: 300ms;
@@ -349,6 +293,7 @@ html {
 .intro_text {
   width: 550px;
   min-height: 340px;
+  padding: 0 1.4em;
 }
 
 .intro_head {
@@ -393,7 +338,6 @@ html {
 .welcome_intro_button {
   padding: 12px 25px 12px 25px;
   max-width: 159px;
-  min-height: 44px;
   color: #E06733;
   border: 2px solid #E06733;
   border-radius: 10px;
@@ -448,7 +392,7 @@ html {
     max-height: 254px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 650px) {
   .container_welcome {
     padding-top: 0;
     padding-top: 116px;
@@ -470,16 +414,14 @@ html {
   }
   .welcome_intro_button {
     min-height: 34px;
-    width: 30%;
-    height: 3%;
-    padding: 5px 8px 5px 8px;
+    padding: 6px 10px 6px 10px;
     font-size: 10px;
     line-height: 20px;
     background-color: #EDF2EC;
   }
 }
 #about {
-  background-color: white;
+  background-color: #fff;
 }
 
 .container_about {
@@ -581,7 +523,7 @@ html {
 }
 
 .container_service {
-  min-height: 1300px;
+  padding-bottom: 4em;
   font-family: "Inika";
 }
 
@@ -601,19 +543,23 @@ html {
 }
 
 .buttons_service {
-  margin-left: 142px;
+  margin-left: 12%;
+  gap: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .button_service {
-  margin-right: 38px;
+  letter-spacing: 2px;
   color: #E06733;
-  min-width: 161px;
+  min-width: 100px;
   min-height: 50px;
   font-size: 20px;
   border: 1px solid #E06733;
@@ -625,22 +571,25 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 .button_service:hover {
   background-color: #E06733;
   color: white;
   border: 1px solid #E06733;
   border-radius: 5px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .garden__button.active {
@@ -691,20 +640,20 @@ html {
 .imagesService.blur {
   -webkit-filter: blur(4px);
           filter: blur(4px);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .imagesService {
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .blur {
   -webkit-filter: blur(4px);
           filter: blur(4px);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .active {
@@ -777,7 +726,7 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-top: 0;
-    padding-bottom: 96px;
+    padding-bottom: 4em;
   }
   .service_head {
     -webkit-box-orient: vertical;
@@ -963,7 +912,7 @@ html {
 }
 
 .prices_head {
-  max-width: 332px;
+  max-width: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -988,6 +937,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 1.3em;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -1029,23 +979,11 @@ html {
   padding: 16px 28px 16px 40px;
   position: relative;
 }
-.select_item:not(:last-of-type) {
-  margin-bottom: 32px;
-}
-.select_item::after {
-  content: "";
-  background-image: url(../img/accordion_btn.svg);
-  width: 16px;
-  height: 16px;
-  margin-left: auto;
-  cursor: pointer;
-}
 .select_item .accordion {
   display: none;
 }
 
 .select_item_h4 {
-  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1053,6 +991,16 @@ html {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+}
+.select_item_h4::after {
+  content: "";
+  background-image: url(../img/accordion_btn.svg);
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  cursor: pointer;
+  position: absolute;
+  right: 28px;
 }
 
 .select_item.active {
@@ -1065,17 +1013,16 @@ html {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-bottom: 0px;
 }
-.select_item.active::after {
+.select_item.active .select_item_h4::after {
   content: "";
   background-image: url(../img/accordion_btn\ \(2\).svg);
   width: 16px;
   height: 16px;
   margin-left: auto;
   cursor: pointer;
-  position: relative;
-  bottom: 89%;
+  position: absolute;
+  right: 28px;
 }
 .select_item.active .accordion {
   display: -webkit-box;
@@ -1142,13 +1089,8 @@ html {
   font-size: 150%;
 }
 
-.prices_button_img {
-  position: absolute;
-  right: 40px;
-}
-
 .prices_info {
-  width: 40%;
+  max-width: 60%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1225,31 +1167,42 @@ html {
   .prices_head {
     margin-right: 40px;
   }
-  .prices_info_h3 {
+  .prices_info h3 {
     font-size: 25px;
     line-height: 140%;
     text-align: right;
-    padding-top: 108px;
+    padding-top: 20%;
   }
   .prices_info h3 {
     font-size: 25px;
     line-height: 140%;
   }
 }
-@media (max-width: 593px) {
+@media (max-width: 595px) {
   .container_prices {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .prices_head {
     margin-right: 0;
   }
+  .prices_info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .prices_info h3 {
+    text-align: center;
+  }
 }
 @media (max-width: 380px) {
   .container_prices {
-    padding: 10px 79px;
+    padding: 10px 20px;
     min-height: 512px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -1260,21 +1213,9 @@ html {
     text-align: center;
     font-size: 1.5rem;
   }
-  .selection_prices {
-    padding: 29px 22px;
-  }
   .select_item {
     font-size: 0.9rem;
     line-height: 1.25rem;
-    padding: 13px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .select_item_h4 {
-    max-width: 100%;
-    padding: 0;
-    padding-left: 30px;
   }
   .select_item:not(:last-of-type) {
     margin-bottom: 9px;
@@ -1359,7 +1300,7 @@ html {
 }
 
 .contact_search_block {
-  width: 35%;
+  width: 37%;
   margin: 0 auto;
   padding-top: 88px;
 }
@@ -1399,8 +1340,8 @@ html {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px;
   border: 1px solid #D6E7D2;
-  padding: 5px 20px;
-  max-height: 50px;
+  position: relative;
+  z-index: 9;
 }
 .city_dropdown li {
   font-size: 20px;
@@ -1415,13 +1356,15 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 10px;
 }
 .city_dropdown li.active {
   display: inline-block;
 }
 .city_dropdown.active {
   background-color: #C1E698;
-  max-height: 50px;
+  -webkit-box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
 }
 .city_dropdown.active .city_option_list::after {
   background-image: url(../img/drop_btn.svg);
@@ -1438,11 +1381,15 @@ html {
 
 .dropdown_hidden {
   display: none;
-  width: 93%;
 }
 .dropdown_hidden.active {
-  position: relative;
-  margin-left: -21px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1621,14 +1568,14 @@ html {
     padding: 0;
   }
   .h2_contact_head {
-    padding: 40px 0 100px;
+    padding: 40px 0 10px;
   }
   .img_contact {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin: 0 auto;
-    padding-top: 250px;
+    padding-top: 100px;
   }
   .contact_search_block {
     width: 70%;
@@ -1714,16 +1661,16 @@ html {
   opacity: 0.5;
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 100ms, 400ms;
-          transition-duration: 100ms, 400ms;
+  -webkit-transition-duration: 100ms, 300ms;
+          transition-duration: 100ms, 300ms;
 }
 .rs-school:focus, .rs-school:hover {
   opacity: 0.8;
   color: #E06733;
   -webkit-transition-property: opacity, color;
   transition-property: opacity, color;
-  -webkit-transition-duration: 100ms, 400ms;
-          transition-duration: 100ms, 400ms;
+  -webkit-transition-duration: 100ms, 300ms;
+          transition-duration: 100ms, 300ms;
 }
 
 .footer h3 .rs-school {
